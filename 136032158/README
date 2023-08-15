@@ -1,0 +1,40 @@
+This is program to implement tokenizing, stopping and stemming.
+
+AB breakdown: The folder contains a file called code.py which has the entire required code written inside. the folder also contains the required input files like
+tokenization-input-part-B.txt, tokenization-input-part-A.txt, and stopwords.txt
+
+tokenized-A.txt contains a list of alll the tokens after processing input file A.
+terms-B.txt contains the most frequent 300 words in file B.
+
+Libraries used: 
+    re - for handling regular expressions
+    string -  to handle basic, standard string operations
+    collections - to enable the use of counter
+    matplotlib - to create the graph proving Heaps' law
+
+Dependencies:
+    pip3 install --uprgade pip
+    pip3 install matplotlib
+
+Build and run the program by typing:
+    Python3 code.py 
+
+The main method runs which calls the following method in the given order:
+    main() -> stemmingb() -> stemminga() -> stop() -> tokenize() -> punctuate() -> abbreviate()
+
+read() opens the required file, A or B as asked by the user
+the result is used by abbreviate, to deal with abbreviations
+this result goes to punctuate(), where the punctuations are removed and special cases like Mr. and Mrs. are dealt
+this result is used by tokenize() to convert every character into lower case and tokenize it. The result is returned as a list.
+this list is then used by stop(), to remove all the stop words
+The new result is then stemmed by stemminga, which follows 1a of the Porter stemmer
+The resulting list is then stemmed by stemmingb(), which follows 1b of the Porter stemmer. It also uses a helper method short() to deal with short regex expressions
+
+
+write300():
+writes the top 300 words into the terms-B.txt, along with their frequencies
+
+writeA():
+writes the output when file A is used as an input into tokenized-A.txt
+The final result is returned.
+

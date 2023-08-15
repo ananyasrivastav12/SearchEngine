@@ -1,0 +1,34 @@
+query.py in the src folder has all the required code to rank the documents for a igven query
+indexing function reads the given input and created an inverted index that contains a dict for every
+sceneID. Every dict has a term in the document as a key, and its frequency in the document as 
+the value.
+
+docLength(inputFile) calculated the length of the document and the average document length for the collection.
+query(queriesFile) splits every given query into a list of the query terms
+
+the function BM25(queryy, index) calculates the K, fi, qfi, ni, and N, and plugs them into the
+required formula to calculate the ranking.
+
+the function ql calculates |D|, fqi, cqi, |C| and plugs them into ql formula to calculate
+the ranking.
+
+The write() function goes through every query, and the index, and ranks every document for a particular query.
+The output is printed in the outputFile.
+
+
+
+
+BM25 : R, ri = 0, K =k1((1−b)+b·dl/avdl )
+ fi is the frequency of term i in the document; 
+ qfi is the frequency of term i in the query
+ k1=1.8, k2=5, b=0.75 x
+ ni is the number of documents containing term i, 
+ N is the total number of documents in the collection. x
+
+ql
+|D| is the number of words in D
+fqi,D is the number of times word qi occurs in document D
+μ=300
+αD= μ |D| + μ
+cqi is the num- ber of times a query word occurs in the collection of documents, 
+ and |C| is the total number of word occurrences in the collection. x

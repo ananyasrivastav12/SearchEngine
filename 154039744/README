@@ -1,0 +1,13 @@
+Breakdown:
+    src/eval.py  contains all the code that has been written. 
+    bm25.eval, ql.eval, and sdm.eval contain the results of running my code on bm25.trecrun, ql.trecrun, and sdm.trecrun respectively.
+
+Description:
+    the file has different functions for all the different evaluation criterion. All the effectiveness measures were referred to from the slides and the book. 
+
+Libraries and Dependancies: Nothing
+
+Building and Running: 
+    To compile and run the code, Python3 src/eval.py
+        or
+    python3 eval.py runfile.trecrun qrels outputFile.eval

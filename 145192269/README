@@ -1,0 +1,6 @@
+Breakdown - The src folder contains indexer.py which has all the required code.
+Description - The function documentAtATime() takes in a query at a time, and divides phrases and words into tokens. If the tokens are in a scene or play, a tuble of the first word of the phrase is obtained. If the first word is in the index, the next words are checked, and if they have the desired positions, the function returns the list of either scene or plays, according to the query.
+This function is called in a loop with all the queries from the query file in the main method.
+Libraries - MatPlotLib
+Running - run the code using python3 src/indexer.py
+
