@@ -1,0 +1,37 @@
+# ✂️ Tokenizing, Stopping, and Stemming
+
+This module implements basic text preprocessing steps commonly used in Information Retrieval systems: **tokenization**, **stopword removal**, and **stemming** (based on the Porter Stemmer rules 1a and 1b). It processes a text file and outputs cleaned tokens, along with visualizations for Heaps' Law.
+
+---
+
+## 🧠 What It Does
+
+- Processes text from input files `tokenization-input-part-A.txt` or `tokenization-input-part-B.txt`
+- Handles:
+  - Abbreviation removal
+  - Punctuation removal
+  - Tokenization (lowercasing and splitting)
+  - Stopword filtering using `stopwords.txt`
+  - Stemming using simplified Porter Stemmer rules (1a and 1b)
+- Generates:
+  - `tokenized-A.txt`: final tokens from file A
+  - `terms-B.txt`: top 300 most frequent terms in file B
+  - A plot visualizing Heaps’ Law (vocabulary growth)
+
+---
+
+## 🗂 Files
+
+- `code.py` — main Python script with all logic
+- `tokenization-input-part-A.txt` — sample input A
+- `tokenization-input-part-B.txt` — sample input B
+- `stopwords.txt` — list of stop words
+- `tokenized-A.txt` — output tokens from A
+- `terms-B.txt` — top 300 frequent terms from B
+
+---
+
+## 🚀 How to Run
+
+```bash
+python3 code.py
